@@ -33,13 +33,36 @@ describe('loading express', function () {
       .expect(404, done);
   });
 
-  it("get '/examples' returns json", function getExample(done) {
+  it("get '/goals' returns json", function getGoal(done) {
     request(server)
-      .get('/examples')
+      .get('/goals')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
+
+  it("post '/goals' returns json", function postGoal(done) {
+    request(server)
+      .get('/goals')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+  it("patch '/goals' returns json", function patchGoal(done) {
+    request(server)
+      .patch('/goals')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+  it("delete '/goals' returns json", function deleteGoal(done) {
+    request(server)
+      .patch('/goals')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+
 
   it("post '/sign-up' creates a user", function postUser(done) {
     const data = {
