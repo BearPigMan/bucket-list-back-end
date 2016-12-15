@@ -1,5 +1,6 @@
 #!/bin/bash
-
+EMAIL="herp@derp.com"
+PASSWORD="herp"
 API="http://localhost:4741"
 URL_PATH="/sign-in"
 
