@@ -7,7 +7,7 @@ const Goal = models.goal;
 const authenticate = require('./concerns/authenticate');
 
 const index = (req, res, next) => {
-  Goal.find().then(goals => res.json({goals})).catch(err => next(err));
+  Goal.find({_owner: req.currentUser._id}).then(goals => res.json({goals})).catch(err => next(err));
 };
 
 const show = (req, res, next) => {
@@ -61,7 +61,7 @@ module.exports = controller({
   before: [
     {
       method: authenticate,
-      except: ['index', 'show']
+      except: ['show']
     }
   ]
 });
