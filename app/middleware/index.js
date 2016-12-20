@@ -9,10 +9,10 @@ const cors = require('cors');
 
 const loader = require('lib/wiring/loader');
 
-const corsPort = +('GA'.split('').reduce((p, c)=> p + c.charCodeAt(), ''));
+const corsPort = +('GA'.split('').reduce((p, c) => p + c.charCodeAt(), ''));
 
 const corsOptions = {
-  origin: process.env.CLIENT_ORIGIN || `http://localhost:${corsPort}`,
+  origin: process.env.CLIENT_ORIGIN || `https://bucket-list-back-end.herokuapp.com`
 };
 
 const before = (app) => {
@@ -20,7 +20,7 @@ const before = (app) => {
   app.use(favicon(path.join(app.get('root'), 'public', 'favicon.ico')));
   app.use(logger('dev'));
   app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.urlencoded({extended: true}));
 };
 
 const after = (app) => {
