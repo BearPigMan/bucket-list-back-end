@@ -31,9 +31,13 @@ const update = (req, res, next) => {
     if (!goal) {
       return next();
     }
-
     delete req.body._owner; // disallow owner reassignment.
-    return goal.update(req.body.goal).then(() => res.sendStatus(200));
+    if (!req.body.goal.title) {
+      return next();
+    }
+    else {
+      return goal.update(req.body.goal).then(() => res.sendStatus(200));
+    }
   }).catch(err => next(err));
 };
 

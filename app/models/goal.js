@@ -15,7 +15,6 @@ const goalSchema = new Schema({
     lat: Number,
     lng: Number
   },
-
   _owner: {
     type: Schema.Types.ObjectId,
     ref: 'User',
