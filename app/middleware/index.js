@@ -12,7 +12,7 @@ const loader = require('lib/wiring/loader');
 const corsPort = +('GA'.split('').reduce((p, c) => p + c.charCodeAt(), ''));
 
 const corsOptions = {
-  origin: process.env.CLIENT_ORIGIN || `https://bearpigman.github.io/`
+  origin: `https://bearpigman.github.io/` || process.env.CLIENT_ORIGIN
 };
 
 const before = (app) => {
