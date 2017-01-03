@@ -1,8 +1,8 @@
-A readme for Bucket-list back-end!
+ Bucket-list back-end!
 
-A link to the deployed back-end:
-A link to the front-end repo: https://github.com/BearPigMan/bucket-list-front-end/tree/maps
-
+A link to the deployed back-end:  https://bucket-list-back-end.herokuapp.com/
+A link to the front-end repo: https://github.com/BearPigMan/bucket-list-front-end/
+A link to the deployed front-end https://bearpigman.github.io/bucket-list-front-end
 # DESCRIPTION #
 
 Bucket list is an app for storing your travel goals across the world. The back end uses MongoDB and a simple one-to-many relationship between users and their goals.
