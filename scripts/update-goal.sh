@@ -1,8 +1,8 @@
 API="http://localhost:4741"
 URL_PATH="/goals"
-TITLE="My goal"
+TITLE=""
 DESCRIPTION="My description"
-ID="585301bea1e1559e3049b426"
+ID="5852f64fa1e1559e3049b41d"
 
 curl "${API}${URL_PATH}/${ID}" \
   --include \
