@@ -8,7 +8,7 @@ A link to the front-end repo: https://github.com/BearPigMan/bucket-list-front-en
 Bucket list is an app for storing your travel goals across the world. The back end uses MongoDB and a simple one-to-many relationship between users and their goals.
 
 # ROUTES AND PATHS #
-git
+
 | Verb            | URI Pattern   | Controller#Action  |
 | :----: |:-------------:| :-----:            |
 | POST   | /sign-up      | users#signup      |
